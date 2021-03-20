@@ -6,7 +6,7 @@ authors = ["Vasundhara <vasundhara131719@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "3.7.10"
 Flask = "^1.1.2"
 
 [tool.poetry.dev-dependencies]
