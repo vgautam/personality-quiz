@@ -6,6 +6,7 @@ import re
 
 app = Flask(__name__)
 app.secret_key = os.urandom(16)
+PORT = 5000
 
 qualities = ['disarming',
              'chaotic',
@@ -141,6 +142,10 @@ def start():
 def end():
     session.pop('first', None)
     return redirect(url_for('index'))
+
+if __name__ == '__main__':
+    # Threaded option to enable multiple instances for multiple user access support
+    app.run(threaded=True)
 
 # TODO: make results page w pretty graphs
 # TODO: db to compare people
